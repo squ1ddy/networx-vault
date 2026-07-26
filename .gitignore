@@ -1,0 +1,13 @@
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+node_modules/
+dist/
+build/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+.claude/current-activity

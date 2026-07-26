@@ -1,0 +1,11 @@
+{
+  "attachmentFolderPath": "./attachments",
+  "userIgnoreFilters": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    ".git/"
+  ],
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest"
+}
