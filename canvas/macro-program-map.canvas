@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": -1400,
+      "y": -1150,
+      "width": 2820,
+      "height": 240,
+      "color": "6",
+      "text": "# 🧭 Networx program — macro model (top-down)\n\n**Vision:** a cohesive set of **open-source components grounded in a shared ontological & semantic language** that puts strategic cyber-risk decisions in the hands of those most qualified — *business operators, not sales folk*. **Compliance-as-code** as the foundational tenet of digitally transforming an industry that desperately needs it.\n\n_Derived from the owner's hand-written narrative + three slides (27 Jul 2026). The two bottom-up maps (wayfinder decisions, session corpus) hang UNDER these boxes — see the ⬇ nodes._"
+    },
+    {
+      "id": "asis",
+      "type": "text",
+      "x": -1520,
+      "y": -860,
+      "width": 560,
+      "height": 1040,
+      "color": "1",
+      "text": "## 🔥 The problem (as-is customer journey)\n\nMost customers are **overwhelmed by cyber risk**. Today every step is manual, disconnected, low-maturity:\n\n1. **Risk assessment** — manual interviews + industry research; controls/policy rarely effective\n2. **Quantify $ of risk** — extreme difficulty; Open FAIR isn't truly *open*; insurer loss data hard to get → *TASK-1.10 FAIR*\n3. **Business impact analysis** — clients can't articulate the financial impost\n4. **Asset inventory** — can't protect what you can't see (automated scans where possible)\n5. **Visual threat models** — current vs target state\n6. **Vuln assessment / pentest / identity**\n7. **Control selection** — min compliance + risk appetite → **.docx/.xlsx outputs** *(the NCF product today)*\n8. **Train & educate** on controls + capture metrics\n9. **Audit** (internal/external) → board memo for decisions & resourcing\n10. **3rd-party risk** — unvalidated questionnaires → supply-chain attacks\n11. **SecOps** (SIEM/EDR/FW/CASB/VM) — disparate, multi-party, vanity metrics, negligible risk reduction\n12. **Tooling** — mediocre point solutions ↔ overwhelming enterprise ↔ OSS\n13. **Vendor FUD** — no skin in the game; buyers can't validate efficacy; no shared language\n14. Every product has a **black-box AI layer** nobody can prove / benchmark / adapt"
+    },
+
+    {
+      "id": "msp",
+      "type": "text",
+      "x": -900,
+      "y": -860,
+      "width": 540,
+      "height": 320,
+      "color": "4",
+      "text": "## 🏢 Networx MSP\n_The 20+ yr business being digitally transformed; **low operational maturity**._\n\n**Service Delivery Areas** (your slide ↓):\n- Service Desk / Support — reactive; the primary way clients judge support\n- Professional Services — implementations, moves/adds/changes, billable\n- Centralised Services — proactive: patch, AV, monitoring, backup/DR, cloud\n- Network Administration — standardisation, technical risk\n- Business Relationship / vCIO — tech planning, budgeting, business risk\n\n_The **context & install base** — mostly Ring-1 reality, not build scope, but the substrate everything transforms._"
+    },
+    {
+      "id": "cyber",
+      "type": "text",
+      "x": -320,
+      "y": -860,
+      "width": 540,
+      "height": 320,
+      "color": "5",
+      "text": "## 🛡️ Cyber Security Practice\n_What you were hired (CSO) to build — but op-maturity / tech-debt / competency gaps meant you've been acting **COO**. **Function × Capability** (your slide ↓)._\n\n**Functions:** GRC · Security Engineering · Testing & Validation · Security Operations · Research & Analysis · DFIR · Education & Training\n\n_The **domain / product spine.** The as-is journey (left) is exactly what this practice, done right, turns into cohesive components._"
+    },
+    {
+      "id": "ai",
+      "type": "text",
+      "x": 260,
+      "y": -860,
+      "width": 540,
+      "height": 320,
+      "color": "2",
+      "text": "## 🤖 AI Practice\n_The **growth engine** — new conversations with clients by solving today's problems. \"**Sell the methodology as we prove it**\" (your slide ↓). Nothing productised yet; dogfooding now._\n\n**7 pillars:** GRC · Problem discovery & advisory · AI engineering · Testing & validation · AI operations · Research & analysis · Education & training\n\n_Dogfooded now: policy dev, problem framing, information papers, agentic workflows, bias diagnostics, sovereign models, dogfooding lab, coaching uplift._"
+    },
+    {
+      "id": "nom",
+      "type": "text",
+      "x": 840,
+      "y": -860,
+      "width": 560,
+      "height": 320,
+      "color": "6",
+      "text": "## ⚙️ New Operating Model / Strategy\n_Binds the other three **and** transforms how the business itself operates._\n\n- All data **machine-readable & structured** by default\n- **Governance & compliance baked in** (compliance-as-code)\n- A **competency journey** — teach technical people to frame the right problems, build durable/repeatable ops, scale\n- Counter **eroded critical thinking / LLM-slop** (the Ian gated-experimentation framework)\n\n_The **substrate / vault itself** + TASK-1.1 (portfolio & command-steering) live here._"
+    },
+
+    { "id": "img_msp", "type": "file", "file": "canvas/reference/traditional-msp.png", "x": -900, "y": -510, "width": 540, "height": 340 },
+    { "id": "img_cyber", "type": "file", "file": "canvas/reference/security-practice.png", "x": -320, "y": -510, "width": 540, "height": 340 },
+    { "id": "img_ai", "type": "file", "file": "canvas/reference/ai-practice.png", "x": 260, "y": -510, "width": 540, "height": 340 },
+    {
+      "id": "nom_themes",
+      "type": "text",
+      "x": 840,
+      "y": -510,
+      "width": 560,
+      "height": 340,
+      "color": "6",
+      "text": "### Operating-model building blocks\n(from `llm-biases/ian specific/` — gated experimentation)\n\n- **Gated process:** problem → experiment → project (staged gates)\n- **Thinking discipline:** problem framing · hypotheses & falsifiability · innovation accounting\n- **Templates:** information paper · experiment proposal · project proposal\n- **Anti-patterns register** + the critical-thinking / LLM-slop guardrails\n\n→ digest: `research/macro-inputs/operating-model-digest.md`\n→ ingest `TASK-2.14`"
+    },
+
+    {
+      "id": "attach_cyber",
+      "type": "text",
+      "x": -320,
+      "y": -140,
+      "width": 540,
+      "height": 280,
+      "color": "5",
+      "text": "### ⬇ What hangs here — the NCF product\nThe **wayfinder decision map (TASK-1)** is the buildable product under this box (and the New Operating Model):\nNCF control framework → document factory (.docx/.xlsx + per-client token model) → FAIR risk-quant → the 20+ suite bookshelf.\n\nThis is where the as-is journey's steps 1-9 get **productised as cohesive components**.\n\n→ [[wayfinder-map.canvas]]"
+    },
+    {
+      "id": "attach_ai",
+      "type": "text",
+      "x": 260,
+      "y": -140,
+      "width": 540,
+      "height": 240,
+      "color": "2",
+      "text": "### ⬇ What hangs here — the Learnings corpus\nThe **session corpus (TASK-2)** — 14 prior sessions + dogfooding evidence, the Learnings domain — is the proof base for \"prove it as we sell it.\"\n\nEvery pillar's *dogfooded* cell should point at a real session here.\n\n→ [[session-corpus-map.canvas]]"
+    },
+    {
+      "id": "sandbox",
+      "type": "text",
+      "x": 840,
+      "y": -140,
+      "width": 560,
+      "height": 220,
+      "color": "3",
+      "text": "## 🧪 Sandbox (adjacent)\n_Experimentation that doesn't yet have to fit a top-down box._\n\nMaps to the **monorepo control-plane** idea (TASK-1.1 fog): pull sibling code into referenced subdirs; a control plane to start/stop apps for exploration; single backlog."
+    },
+
+    {
+      "id": "linkages",
+      "type": "text",
+      "x": -1520,
+      "y": 210,
+      "width": 1360,
+      "height": 300,
+      "color": "3",
+      "text": "## 🔗 Cross-box linkages (for us to work next)\nYou flagged **huge linkages between the downscale branches**. The main ones I see:\n\n- **Cyber GRC ↔ AI GRC** — both want one shared control/policy engine = **NCF**. Don't build it twice.\n- **as-is \"quantify $ risk\" ↔ FAIR ↔ the insurance grand prize** — one thread from pain → method → market.\n- **AI Testing/Validation (bias, benchmarking) ↔ the \"black-box AI\" problem** the vision explicitly solves — this is a *differentiator*, not just internal hygiene.\n- **New Operating Model ↔ everything** — compliance-as-code + machine-readable data is the connective tissue; it's not a 4th silo, it's the substrate.\n- **Networx MSP ↔ Cyber Practice** — the MSP is tenant-zero and the install base; the practice's first customer.\n\n_Detailed branch-to-branch mapping = next session._"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "x": -120,
+      "y": 210,
+      "width": 1520,
+      "height": 300,
+      "color": "3",
+      "text": "## Legend / provenance\n- **Boxes** = your top-down model (hand-written narrative + 3 slides, 27 Jul 2026).\n- **Slides embedded as your originals** (`canvas/reference/*.png`) — the source of truth for each box's decomposition.\n- **🔥 as-is journey** (left) = the problem; **🧭 vision** (top) = the destination; the four boxes are how you get there.\n- **Bottom-up maps hang underneath** via [[wayfinder-map.canvas]] (the NCF build) and [[session-corpus-map.canvas]] (the Learnings corpus).\n- **Comprehensive notes:** `program-map/MACRO-PROGRAM-STRUCTURE.md`\n- Deep digests of the two new folders: `research/macro-inputs/` (AI Practice deck, operating-model framework)."
+    }
+  ],
+  "edges": [
+    { "id": "e_t_msp", "fromNode": "title", "fromSide": "bottom", "toNode": "msp", "toSide": "top" },
+    { "id": "e_t_cyber", "fromNode": "title", "fromSide": "bottom", "toNode": "cyber", "toSide": "top" },
+    { "id": "e_t_ai", "fromNode": "title", "fromSide": "bottom", "toNode": "ai", "toSide": "top" },
+    { "id": "e_t_nom", "fromNode": "title", "fromSide": "bottom", "toNode": "nom", "toSide": "top" },
+    { "id": "e_asis_cyber", "fromNode": "asis", "fromSide": "right", "toNode": "cyber", "toSide": "left", "label": "transforms", "color": "1" },
+    { "id": "e_cyber_nom", "fromNode": "cyber", "fromSide": "right", "toNode": "nom", "toSide": "left", "label": "bound by", "color": "6" },
+    { "id": "e_ai_nom", "fromNode": "ai", "fromSide": "right", "toNode": "nom", "toSide": "left", "label": "bound by", "color": "6" },
+    { "id": "e_msp_nom", "fromNode": "msp", "fromSide": "bottom", "toNode": "nom", "toSide": "left", "label": "transforms into", "color": "6" }
+  ]
+}
