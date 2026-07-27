@@ -1,0 +1,53 @@
+# Concept-canvas / graph-thinking — session shape
+
+*Source: `platform_research_sessions/wiki-ingest/concept-canvas-thinking/session-transcript.jsonl` (156 JSONL lines; 62 assistant / 40 user records, but only ~5 real human turns — the rest are tool results/attachments). Session ran 2026-07-21 in a Cowork/cloud sandbox.*
+
+## At a glance
+- **Shape:** short, front-loaded, and unusually disciplined. One large opening brief → task plan → 3 parallel research sub-agents → synthesis → one refinement loop → handoff packaging. Not a thrash session.
+- **Tools:** TaskCreate/TaskUpdate (12), Write (5, all deliverables), Agent (4 research sub-agents), ToolSearch (5 — half of them a late flail), Bash (5 — packaging/self-exfil), SendUserFile (4), AskUserQuestion (1).
+- **Deliverables produced:** `graph-thinking-research-brief.md`, `graph-capture-system-design.md`, `canvas-architecture-v2.md`, `canvas-legend_1.md`, `HANDOFF.md`, plus a `concept-map-specs/` bundle (zip) and a self-copied transcript.
+- **Verdict:** Good research/design hygiene (parallel agents, sources verified against repos/changelogs, honesty log, non-negotiables listed). The missteps are narrow: scope was *asserted by the assistant* rather than *grilled out of the user*, and the session ended in tooling/plumbing detours.
+
+## Narrative arc
+1. **L3 — opening brief (the whole session's DNA).** User: "I've been solving the wrong problem." Describes graph/mindmap-shaped autistic cognition (thoughts arrive fast, broad→deep, loose links, orphan fragments), asks for (1) citeable research on this thinking style + how to maximise it in ideation, and (2) ideas to capture-at-speed into a machine+human-readable format feeding an existing `llm-wiki-compiler + backlog.md + Obsidian` stack. Names candidate OSS (Wisemapping, Semantik, Freeplane; Heuristica as failed prior attempt).
+2. **L8–L30 — plan + fan-out.** Assistant creates 4 tasks and dispatches 3 general-purpose research agents in parallel (cognition literature; OSS tool survey; capture→formalisation HCI).
+3. **L38–L58 — synthesis #1.** Two deliverables written and sent. Headline framing: monotropism (Murray/Lesser/Lawson 2005) matches user's self-model; Shipman & Marshall "Formality Considered Harmful" (1999) → incremental formalization is the design north star.
+4. **L62–L73 — user drops ~11 Heuristica screenshots.** This is the real pivot: the screenshots reframe the target from "the map" to "the *prompt palette*" (node-scoped, additive AI actions).
+5. **L79–L98 — synthesis #2 (architecture v2).** Assistant fires a 4th verification agent (Obsidian Canvas ecosystem), then writes `canvas-architecture-v2.md`: locks Obsidian Canvas / JSON Canvas + Advanced Canvas as the spine, scores user's six criteria, specs the palette. One AskUserQuestion (which base surface — Excalidraw vs Canvas) appears here.
+6. **L102–L112 — handoff concerns.** User raises the real operational worry: "how do I move this to a Claude Code session, and how do I avoid clobbering the in-flight llm-wiki spec?" Assistant writes `HANDOFF.md` with 6 locked decisions, 4 integration rules, open questions blocked-on-spec.
+7. **L116–L154 — packaging + self-exfiltration flail.** User asks for a first-pass prompt for the other agent + the session `.jsonl`. Assistant cannot write to `D:\` (desktop bridge not live), spends 3+ ToolSearch calls hunting for a remote-device file-write tool, falls back to zipping a `concept-map-specs` bundle and hunting the sandbox filesystem to copy its own transcript out.
+
+## Key decisions made
+- **Surface:** Obsidian Canvas (`.canvas` / JSON Canvas 1.0) + Advanced Canvas plugin; desktop-primary, mobile capture-only.
+- **Effort tier:** "light glue" — existing plugins + prompt/command templates + ~100-line scripts. No new UI initially; Augmented Canvas fork deferred.
+- **Non-destructive write-back as a *tool-level guarantee*, not a prompt promise:** AI can only ADD nodes into a dedicated `⊕ Proposals` group, `#ai`-tagged, never edit/move/delete user nodes, never draw edges to them. Human draws all edges. (Enforced in the script/API layer.)
+- **Personal ontology externalised as `canvas-legend.md`:** colour/shape/edge-style → semantics; agents MUST read it before interpreting or emitting canvas content. Dashed edge = loose/intuited; solid+labelled = named proposition.
+- **Never a holistic re-parse:** every AI action scoped to a selected node (+ neighbours + legend) or an explicit tag/type query.
+- **~6-relation edge vocabulary** (supports/contradicts/depends-on/elaborates/causes/relates-to) intended to match the wiki's typed-link syntax.
+- **Markdown→canvas as first-class ingestion** (`md2canvas.py`): independent Claude Code session outputs arrive as fragment sub-canvases surfaced through *portals*, never auto-merged.
+
+## Missteps & dead-ends (approx turn positions)
+1. **Scope set by assistant fiat, not grilled from the user (L8, before any question).** The very first act was TaskCreate ×4 and dispatching 3 research agents — committing to a research-brief + system-design + full-tool-survey deliverable set off a single (long, ambiguous) prompt. The user's two asks ("surface research" / "ideas to integrate") were interpreted as "build me a locked architecture." No clarifying question preceded ~30 turns of work.
+2. **The screenshots (L62) should have come first, not mid-session.** The Heuristica screenshots contained the actual product intent (the palette). They arrived only after synthesis #1 was already written, forcing an architecture v2 rewrite (L91). The whole first design pass was aimed at the wrong centre of gravity ("the map" vs "the palette").
+3. **AskUserQuestion arrives at L80 — far too late.** The one genuine either/or grilling moment (Excalidraw vs Obsidian Canvas as base surface) is asked *after* the assistant has effectively already decided and written toward Canvas. It reads as ratification, not a real fork.
+4. **Late-session tooling flail (L119–L154).** Three ToolSearch calls (`+remote-devices`, `device_bash`, `+remote-devices` again) hunting a file-write path that didn't exist, then filesystem spelunking to self-exfiltrate the transcript. Pure plumbing churn, unrelated to the design problem.
+5. **Mild over-engineering / speculative depth.** A ~20-action palette spec, MCP fork plans, pptx→pdf preview shims, and a multi-day build order were produced while the *foundational* dependency (the wiki page-type schema and typed-link syntax) was explicitly still unlanded — flagged as "blocked on your spec" but only after the detailed design was written on top of it.
+
+## Where /grilling or /wayfinder would have helped (specific)
+- **Before L8 (biggest win).** A wayfinder/grilling pass on the L3 brief would have forced: *"Is the ask research, or a build spec? What's the one artefact you need out of this session? Do you have reference material (Heuristica) to share before I design?"* — which surfaces the screenshots up front and prevents the synthesis-#1-then-rewrite loop. **This is the clearest "grilling would have caught it" moment:** the model committed to a heavyweight deliverable set off an admittedly-fuzzy prompt without one question.
+- **At the surface choice.** The Excalidraw-vs-Canvas decision (L80) is a load-bearing fork that should have been grilled *first* (criteria weights, mobile story, lock-in), not confirmed after the fact.
+- **On the dependency order.** Grilling "what must be true for md2canvas / R2 tag-promotion to work?" exposes that the wiki page-type schema is an upstream blocker — arguing for a thin gap-list deliverable instead of a full palette/MCP design built on unlanded conventions.
+- **On the exfil detour.** A wayfinder checkpoint ("the goal is handing context to the next session — what's the minimum medium?") short-circuits the remote-device tool hunt: files-in-repo + a bundle was always the answer.
+
+## Salvage (esp. feeding TASK-1.1 portfolio/vault structure — vault-as-graph/canvas)
+This session is a rich, directly reusable model for **how a vault holds knowledge as a graph/canvas.** Concretely portable into the portfolio/vault structure:
+
+- **Legend-as-ontology pattern.** A single `canvas-legend.md` (or vault-level equivalent) makes the visual vocabulary machine-readable: colour/shape/edge-style → semantics, read by agents before any interpretation. This is the mechanism for "the vault's ontology is externalised and versioned, not imposed by a tool." Directly reusable as a vault convention.
+- **Additive-only, human-draws-edges guarantee.** The strongest transferable principle: machine writes can only *propose* (into a flagged Proposals group), never mutate human nodes or assert edges. Meaning-making (drawing/accepting an edge) stays a human act. This is the guardrail that lets an agent enrich a knowledge graph without corrupting it — a vault-level invariant worth adopting verbatim.
+- **Node-scoped, never-holistic AI actions.** Every operation scoped to a node + immediate neighbours + legend, output small and source-attributed. Prevents the "agent rewrites my whole graph" failure mode.
+- **Fragments-arrive-as-portals, not merges.** Independent session outputs (markdown files with frontmatter: id/source/date/default-type; heading nesting → node hierarchy; typed-links → edges; wikilinks → cross-refs) compile to sub-canvases surfaced through portals, connected only by a human. This is a clean model for **how the vault absorbs many independent research/session outputs into one graph without auto-clobbering** — exactly the TASK-1.1 concern.
+- **Shared edge vocabulary = shared link taxonomy.** The proposed ~6 relations (supports / contradicts / depends-on / elaborates / causes / relates-to) should be the SAME set used by canvas edges AND the wiki's typed links — one relation vocabulary across visual and prose views. Good candidate for the vault's link taxonomy.
+- **Incremental formalization (Shipman & Marshall 1999) + monotropism framing.** Design north star: never demand structure at capture time; infer/confirm later. Capture-fast (inbox, `#tag` shorthand) → formalize-on-demand (promote to typed frontmatter file). Feeds how the vault should treat raw capture vs mature typed notes.
+- **Reverse-view tooling exists** (canvas→mermaid/D2 via obsidian-canvas-export; canvas→linear md via Canvas2Document) — the same graph can be rendered as canvas, mermaid, or prose without a lossy translation step, since `.canvas` JSON is already the machine format.
+
+**Caveat when salvaging:** several pieces are blocked on the (then-unlanded) wiki page-type schema and typed-link syntax — see HANDOFF.md "Open questions." Treat the palette/MCP/build-order detail as inspiration, but land the schema/relation vocabulary first.
