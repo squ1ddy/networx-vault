@@ -1,55 +1,25 @@
 {
-  "nodes": [
-    {
-      "id": "title",
-      "type": "text",
-      "x": -700,
-      "y": -420,
-      "width": 1400,
-      "height": 150,
-      "color": "6",
-      "text": "# 📚 Prior research corpus — `platform_research_sessions/`\n\n~12 standalone Claude sessions, mapped + queued for piece-by-piece ingest (**Ingest track = TASK-2**). Each node → the wayfinder ticket it informs + its ingest task. ✅ = `.jsonl` shape-extracted (`research/session-shapes/`); ⏳ = md-only, grillable directly. Companion: `canvas/wayfinder-map.canvas`."
-    },
-
-    { "id": "h_found", "type": "text", "x": -1080, "y": -180, "width": 300, "height": 70, "color": "6", "text": "## 🏛️ Foundation" },
-    { "id": "s_scoping", "type": "text", "x": -1080, "y": -90, "width": 300, "height": 200, "color": "6",
-      "text": "### ⏳ Program scoping workspace\n**Three-layer thesis:** platform wedge → AI practice → insurance grand prize. Hypothesis/decision registers, AU framing (CPS 234, SOCI).\n_md only — grill directly, no transcript to parse._\n→ the **whole map** + business-model fog · ingest `TASK-2.1`" },
-
-    { "id": "h_build", "type": "text", "x": -740, "y": -180, "width": 300, "height": 70, "color": "4", "text": "## 🏗️ Core build" },
-    { "id": "s_docgen", "type": "text", "x": -740, "y": -90, "width": 300, "height": 195, "color": "4",
-      "text": "### ✅ Policy docgen POC\n⚠️ **Scope-creep tale:** schema-POC → full React SPA, 10 compactions; WYSIWYG-wrong-target realized at U51. Salvage: DSP/CSOP model, MCC/DSR, token round-trip (no bold/italic in control fields).\n→ `1.3`·`1.7`·`1.8`·`1.9` · shape ✓ · `TASK-2.2`" },
-    { "id": "s_scf", "type": "text", "x": -740, "y": 135, "width": 300, "height": 195, "color": "4",
-      "text": "### ✅ SCF recreate — prose vs mappings\nMappings(public)+prose(proprietary); **de-license recipe + runnable harness already built.** SCF text found FREE in CISO-Assistant mirror. ⚠️ hallucinated an ISO 27002 clause — ISO caveat stands.\n→ `1.2`·`1.11` · shape ✓ · `TASK-2.3`" },
-
-    { "id": "h_fmt", "type": "text", "x": -400, "y": -180, "width": 300, "height": 70, "color": "5", "text": "## 🧩 Data format" },
-    { "id": "s_oscal", "type": "text", "x": -400, "y": -90, "width": 300, "height": 200, "color": "5",
-      "text": "### ✅ OSCAL research wiki (22 docs)\nBest-run of the set (disciplined 21-agent map-reduce). **Salvage split:** docs 01-07/09/11 = OSCAL-as-FORMAT → `1.4`/`1.11`; docs 12-21 = OSCAL-as-platform → out of scope. ⚠️ 2-day Chrome/YouTube tooling saga.\nshape ✓ · `TASK-2.4`" },
-
-    { "id": "h_ai", "type": "text", "x": -60, "y": -180, "width": 300, "height": 70, "color": "2", "text": "## 🤖 AI advisory / threat" },
-    { "id": "s_cyber", "type": "text", "x": -60, "y": -90, "width": 300, "height": 190, "color": "2",
-      "text": "### ✅ AI advisory POC design (cyber agent)\nRAG/KG over CPS 234/230, SOCI, case law. ⚠️ production-instincts-on-a-throwaway (each over-build walked back). Landed Langflow (MIT); CISO-Assistant AGPL → re-author. Salvage: assemble_paper invariant, 0-fabricated-citations bar.\n→ deferred AI-advisory shelf · shape ✓ · `TASK-2.5`" },
-    { "id": "s_fin", "type": "text", "x": -60, "y": 130, "width": 300, "height": 195, "color": "2",
-      "text": "### ⭐✅ Financial 4th-party breach exemplar\n**Learnings seed.** Salvage: a portable **regulatory-obligation-map recipe** (threshold gate → clause+source per assertion → split by actor/regime) + doc skeleton. ⚠️ missteps were all tooling-capability claims — re-verify.\n→ AI-advisory · NCF-I · shape ✓ · `TASK-2.6`" },
-    { "id": "s_threat", "type": "text", "x": -60, "y": 355, "width": 300, "height": 180, "color": "2",
-      "text": "### ✅ NCF threat-model session\nBenchmark-picked tool + a reusable SSOT→emitters attack-path pipeline. ⚠️ 1h+ rabbit hole forcing a human-only GUI (upstream bug). Anti-pattern: don't automate human GUIs, use the CLI.\n→ threat modeling · AI advisory · shape ✓ · `TASK-2.7`" },
-
-    { "id": "h_oss", "type": "text", "x": 280, "y": -180, "width": 300, "height": 70, "color": "1", "text": "## 🔍 OSS evals" },
-    { "id": "s_oss", "type": "text", "x": 280, "y": -90, "width": 300, "height": 185, "color": "1",
-      "text": "### ⏳ Open-source platform evals\nAssessment prompts + synthesis: SimpleRisk, GovReady-Q, CISO-Assistant (+ docker-compose).\n_md/prompts only — grill directly._ **Licence-first triage** is the recurring lesson.\n→ standing out-of-scope; pulled per-fork · `TASK-2.8`" },
-
-    { "id": "h_prac", "type": "text", "x": 620, "y": -180, "width": 300, "height": 70, "color": "3", "text": "## 🧪 AI practice / substrate" },
-    { "id": "s_bias", "type": "text", "x": 620, "y": -90, "width": 300, "height": 190, "color": "3",
-      "text": "### ✅ LLM bias diagnostic + battery\n⚠️ **FOLDER MISMATCH:** the exported transcript is actually an **IA/SSOT** session, not the bias one. Bias gold (sycophancy rubric, rates-not-examples N≥20, promptfoo battery) lives in the `01-04` md — unauditable provenance. IA/SSOT method → feeds `TASK-1.1`.\nshape ✓ · `TASK-2.9`" },
-    { "id": "s_canvas", "type": "text", "x": 620, "y": 130, "width": 300, "height": 180, "color": "3",
-      "text": "### ✅ Concept-canvas + graph-thinking\n**Reusable vault invariants:** additive-only · human-draws-edges · legend-as-ontology · node-scoped AI actions · shared ~6-relation edge vocab (canvas ↔ wiki links).\n→ `TASK-1.1` vault structure · shape ✓ · `TASK-2.10`" },
-    { "id": "s_tool", "type": "text", "x": 620, "y": 340, "width": 300, "height": 180, "color": "3",
-      "text": "### ✅ Claude-sessions ingest tooling\nAlready BUILT a `session-scanner` skill (scan_code_sessions + build_bundle). **Partly automates the ingest track** — but prototype-grade, synthetic-only, zip lives in source session. Verify on real data. Ties to `TASK-3` archive.\nshape ✓ · `TASK-2.11`" },
-    { "id": "s_llm", "type": "text", "x": 620, "y": 550, "width": 300, "height": 145, "color": "3",
-      "text": "### ✅ OSS LLM models / training\nReference facts only (open-weight vs OSAID, open-data ceiling, cyber corpora). Destination never pressure-tested → confirms **Ring 3 / low priority**.\nshape ✓ · `TASK-2.12`" },
-
-    { "id": "legend", "type": "text", "x": -1080, "y": 340, "width": 620, "height": 285, "color": "3",
-      "text": "## Legend\n\n- **✅** = `.jsonl` shape-extracted → `research/session-shapes/*.md` (arc → decisions → **missteps** → where grilling/wayfinder would have helped).\n- **⏳** = md/prompts only, no transcript — grillable directly.\n- **⭐** = flagship Learnings-domain seed. **⚠️** = a caught misstep or data-quality flag.\n- Colour = theme. `TASK-1.x` = wayfinder decision map; `TASK-2.x` = ingest track.\n- **Recurring lesson across all 9 parses:** leaping from a fuzzy brief into heavy build with no scope gate — exactly what a grilling/wayfinder pass installs.\n- `session-logs/` was empty (skipped)."
-    }
-  ],
-  "edges": []
+	"nodes":[
+		{"id":"title","type":"text","text":"# 📚 Prior research corpus — `platform_research_sessions/`\n\n~12 standalone Claude sessions, mapped + queued for piece-by-piece ingest (**Ingest track = TASK-2**). Each node → the wayfinder ticket it informs + its ingest task. ✅ = `.jsonl` shape-extracted (`research/session-shapes/`); ⏳ = md-only, grillable directly. Companion: `canvas/wayfinder-map.canvas`.","x":-700,"y":-420,"width":1400,"height":150,"color":"6"},
+		{"id":"h_found","type":"text","text":"## 🏛️ Foundation","x":-1080,"y":-180,"width":300,"height":70,"color":"6"},
+		{"id":"s_scoping","type":"text","text":"### ⏳ Program scoping workspace\n**Three-layer thesis:** platform wedge → AI practice → insurance grand prize. Hypothesis/decision registers, AU framing (CPS 234, SOCI).\n_md only — grill directly, no transcript to parse._\n→ the **whole map** + business-model fog · ingest `TASK-2.1`","x":-1080,"y":-90,"width":300,"height":200,"color":"6"},
+		{"id":"h_build","type":"text","text":"## 🏗️ Core build","x":-740,"y":-180,"width":300,"height":70,"color":"4"},
+		{"id":"s_docgen","type":"text","text":"### ✅ Policy docgen POC\n⚠️ **Scope-creep tale:** schema-POC → full React SPA, 10 compactions; WYSIWYG-wrong-target realized at U51. Salvage: DSP/CSOP model, MCC/DSR, token round-trip (no bold/italic in control fields).\n→ `1.3`·`1.7`·`1.8`·`1.9` · shape ✓ · `TASK-2.2`","x":-740,"y":-90,"width":300,"height":195,"color":"4"},
+		{"id":"s_scf","type":"text","text":"### ✅ SCF recreate — prose vs mappings\nMappings(public)+prose(proprietary); **de-license recipe + runnable harness already built.** SCF text found FREE in CISO-Assistant mirror. ⚠️ hallucinated an ISO 27002 clause — ISO caveat stands.\n→ `1.2`·`1.11` · shape ✓ · `TASK-2.3`","x":-740,"y":135,"width":300,"height":195,"color":"4"},
+		{"id":"h_fmt","type":"text","text":"## 🧩 Data format","x":-400,"y":-180,"width":300,"height":70,"color":"5"},
+		{"id":"s_oscal","type":"text","text":"### ✅ OSCAL research wiki (22 docs)\nBest-run of the set (disciplined 21-agent map-reduce). **Salvage split:** docs 01-07/09/11 = OSCAL-as-FORMAT → `1.4`/`1.11`; docs 12-21 = OSCAL-as-platform → out of scope. ⚠️ 2-day Chrome/YouTube tooling saga.\nshape ✓ · `TASK-2.4`","x":-400,"y":-90,"width":300,"height":323,"color":"5"},
+		{"id":"h_ai","type":"text","text":"## 🤖 AI advisory / threat","x":-60,"y":-180,"width":300,"height":70,"color":"2"},
+		{"id":"s_cyber","type":"text","text":"### ✅ AI advisory POC design (cyber agent)\nRAG/KG over CPS 234/230, SOCI, case law. ⚠️ production-instincts-on-a-throwaway (each over-build walked back). Landed Langflow (MIT); CISO-Assistant AGPL → re-author. Salvage: assemble_paper invariant, 0-fabricated-citations bar.\n→ deferred AI-advisory shelf · shape ✓ · `TASK-2.5`","x":-60,"y":-90,"width":300,"height":190,"color":"2"},
+		{"id":"s_fin","type":"text","text":"### ⭐✅ Financial 4th-party breach exemplar\n**Learnings seed.** Salvage: a portable **regulatory-obligation-map recipe** (threshold gate → clause+source per assertion → split by actor/regime) + doc skeleton. ⚠️ missteps were all tooling-capability claims — re-verify.\n→ AI-advisory · NCF-I · shape ✓ · `TASK-2.6`","x":-60,"y":130,"width":300,"height":195,"color":"2"},
+		{"id":"s_threat","type":"text","text":"### ✅ NCF threat-model session\nBenchmark-picked tool + a reusable SSOT→emitters attack-path pipeline. ⚠️ 1h+ rabbit hole forcing a human-only GUI (upstream bug). Anti-pattern: don't automate human GUIs, use the CLI.\n→ threat modeling · AI advisory · shape ✓ · `TASK-2.7`","x":-60,"y":355,"width":300,"height":180,"color":"2"},
+		{"id":"h_oss","type":"text","text":"## 🔍 OSS evals","x":280,"y":-180,"width":300,"height":70,"color":"1"},
+		{"id":"s_oss","type":"text","text":"### ⏳ Open-source platform evals\nAssessment prompts + synthesis: SimpleRisk, GovReady-Q, CISO-Assistant (+ docker-compose).\n_md/prompts only — grill directly._ **Licence-first triage** is the recurring lesson.\n→ standing out-of-scope; pulled per-fork · `TASK-2.8`","x":280,"y":-90,"width":300,"height":185,"color":"1"},
+		{"id":"h_prac","type":"text","text":"## 🧪 AI practice / substrate","x":620,"y":-180,"width":300,"height":70,"color":"3"},
+		{"id":"s_bias","type":"text","text":"### ✅ LLM bias diagnostic + battery\n⚠️ **FOLDER MISMATCH:** the exported transcript is actually an **IA/SSOT** session, not the bias one. Bias gold (sycophancy rubric, rates-not-examples N≥20, promptfoo battery) lives in the `01-04` md — unauditable provenance. IA/SSOT method → feeds `TASK-1.1`.\nshape ✓ · `TASK-2.9`","x":620,"y":-90,"width":300,"height":190,"color":"3"},
+		{"id":"s_canvas","type":"text","text":"### ✅ Concept-canvas + graph-thinking\n**Reusable vault invariants:** additive-only · human-draws-edges · legend-as-ontology · node-scoped AI actions · shared ~6-relation edge vocab (canvas ↔ wiki links).\n→ `TASK-1.1` vault structure · shape ✓ · `TASK-2.10`","x":620,"y":130,"width":300,"height":180,"color":"3"},
+		{"id":"s_tool","type":"text","text":"### ✅ Claude-sessions ingest tooling\nAlready BUILT a `session-scanner` skill (scan_code_sessions + build_bundle). **Partly automates the ingest track** — but prototype-grade, synthetic-only, zip lives in source session. Verify on real data. Ties to `TASK-3` archive.\nshape ✓ · `TASK-2.11`","x":620,"y":340,"width":300,"height":180,"color":"3"},
+		{"id":"s_llm","type":"text","text":"### ✅ OSS LLM models / training\nReference facts only (open-weight vs OSAID, open-data ceiling, cyber corpora). Destination never pressure-tested → confirms **Ring 3 / low priority**.\nshape ✓ · `TASK-2.12`","x":620,"y":550,"width":300,"height":145,"color":"3"},
+		{"id":"legend","type":"text","text":"## Legend\n\n- **✅** = `.jsonl` shape-extracted → `research/session-shapes/*.md` (arc → decisions → **missteps** → where grilling/wayfinder would have helped).\n- **⏳** = md/prompts only, no transcript — grillable directly.\n- **⭐** = flagship Learnings-domain seed. **⚠️** = a caught misstep or data-quality flag.\n- Colour = theme. `TASK-1.x` = wayfinder decision map; `TASK-2.x` = ingest track.\n- **Recurring lesson across all 9 parses:** leaping from a fuzzy brief into heavy build with no scope gate — exactly what a grilling/wayfinder pass installs.\n- `session-logs/` was empty (skipped).","x":-1080,"y":378,"width":620,"height":362,"color":"3"}
+	],
+	"edges":[]
 }
