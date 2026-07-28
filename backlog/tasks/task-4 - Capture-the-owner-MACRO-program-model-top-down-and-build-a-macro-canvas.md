@@ -4,7 +4,7 @@ title: Capture the owner MACRO program model (top-down) and build a macro canvas
 status: In Progress
 assignee: []
 created_date: '2026-07-27 08:29'
-updated_date: '2026-07-27 12:42'
+updated_date: '2026-07-28 07:56'
 labels:
   - chore
 dependencies: []
@@ -23,5 +23,5 @@ The two canvases built so far (wayfinder-map, session-corpus-map) are accurate b
 ## Implementation Notes
 
 <!-- SECTION:NOTES:BEGIN -->
-DELIVERED (v1, awaiting owner reaction). Built canvas/macro-program-map.canvas from the owner hand-written narrative + 3 slides (embedded as originals in canvas/reference/): 5 boxes (Networx MSP, Cyber Security Practice, AI Practice, New Operating Model, Sandbox) + as-is journey + vision, with the two bottom-up maps hung underneath. Comprehensive notes: program-map/MACRO-PROGRAM-STRUCTURE.md. KEY INSIGHT: the New Operating Model (Ian gated-experimentation framework) IS the same discipline as grilling/wayfinder — operating model = why, MP-skills = how, this vault = dogfooding lab. 5 open questions posed for the owner (see notes s8). Stays In Progress until the owner reacts + we re-home the wayfinder map under the macro model.
+DELIVERED v2 (owner @SM corrections folded in). canvas/macro-program-map.canvas + program-map/MACRO-PROGRAM-STRUCTURE.md (v2). Corrections: AI Practice is DECOUPLED from Cyber Practice (distinct, independently viable, leveraged via dogfooding) and needs its OWN problem-shape box; New Operating Model = EOS (broader than the gated-experimentation framework, which is one component), drawn as underpinning substrate-box with People/Strategy/Execution/Cash branches; AI GRC != Cyber GRC; FAIR is a deep domain, NOT elevated. Next work is UPSTREAM-first per program-map/HANDOFF-PLAN.md (finalise the substrate before more build here). Wayfinder map to be fully rebuilt later, blocked on upstream.
 <!-- SECTION:NOTES:END -->
