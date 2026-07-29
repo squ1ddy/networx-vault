@@ -4,9 +4,15 @@
       {
         "matcher": "startup|resume|clear",
         "hooks": [
-          { "type": "command", "command": "node .claude/scripts/session-intro.mjs" }
+          {
+            "type": "command",
+            "command": "node .claude/scripts/session-intro.mjs"
+          }
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "telegram@claude-plugins-official": true
   }
 }
