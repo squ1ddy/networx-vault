@@ -1,15 +1,15 @@
 ---
-name: substrate-fetch-url
-description: Capture — fetch a cited URL, convert the page to clean markdown, and drop it into the vault Inbox/ as a light **source** (type/title/source-url/captured/tags) so it composes with /substrate:ingest and /substrate:promote. Invoke as /substrate:fetch-url.
+name: harness-fetch-url
+description: Capture — fetch a cited URL, convert the page to clean markdown, and drop it into the vault Inbox/ as a light **source** (type/title/source-url/captured/tags) so it composes with /harness:ingest and /harness:promote. Invoke as /harness:fetch-url.
 disable-model-invocation: true
 ---
 
-# /substrate:fetch-url — cited URL → markdown source in the Inbox
+# /harness:fetch-url — cited URL → markdown source in the Inbox
 
 Turn a URL you want to keep into a clean markdown **source** in the vault
 `Inbox/`. This is the zero-friction capture step for web content: fetch, clean,
 drop it in the Inbox quarantine as a light source, and stop. Later passes
-(`/substrate:ingest`, `/substrate:promote`) triage it into typed records. Read
+(`/harness:ingest`, `/harness:promote`) triage it into typed records. Read
 `CONTEXT.md` for the ubiquitous language (Inbox, Artifact/Source, Record) before
 you start.
 
@@ -76,7 +76,7 @@ graph record yet. Promotion happens later, through the ingest pipeline.
 > **On `type: source`.** This is deliberately *off* the canonical record enum
 > (`idea/research/concept/prd/reference/adr`; ADR-0004 + 0006). An Inbox capture
 > is a **Source** (CONTEXT.md), not a typed graph record — the record `type` is
-> assigned only when `/substrate:promote` files it. The `title` field is included
+> assigned only when `/harness:promote` files it. The `title` field is included
 > as a convenience for that downstream step; the light frontmatter is otherwise
 > just `source-url` / `captured` / `tags`.
 
@@ -84,7 +84,7 @@ graph record yet. Promotion happens later, through the ingest pipeline.
 
 - **Capture, don't file.** The source lands in `Inbox/` unjudged. Deciding
   whether it becomes a Reference record, an Artifact citation, or gets dropped
-  is `/substrate:ingest` + `/substrate:promote`'s job, not this skill's.
+  is `/harness:ingest` + `/harness:promote`'s job, not this skill's.
 - **Do not invent provenance.** `source-url` is the real URL you fetched, stored
   verbatim — never a guessed or canonicalised substitute.
 - **Convert cleanly, don't summarise.** Preserve the page's actual content
@@ -97,5 +97,5 @@ graph record yet. Promotion happens later, through the ingest pipeline.
 
 - **TASK-29 (web clipper)** — the fuller browser-based capture flow. This skill
   is the minimal, agent-driven seam; it does *not* subsume the clipper.
-- **`/substrate:ingest` / `/substrate:promote`** — the downstream triage that
+- **`/harness:ingest` / `/harness:promote`** — the downstream triage that
   turns an Inbox source into typed graph records.

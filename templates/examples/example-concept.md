@@ -25,7 +25,7 @@ requirement — the committed shape would land as a PRD (see [[example-prd]]).
 Model the flow as one loop with two verbs over a single living file:
 
 1. **Ingest** — a URL, PDF, or braindump lands in `Inbox/`. A vault session (or the
-   `substrate-ingest` skill) stamps it as a typed record (usually `idea`), sets `topic:`,
+   `harness-ingest` skill) stamps it as a typed record (usually `idea`), sets `topic:`,
    and records provenance. Frozen artifacts get a sidecar `source-note` (see
    [[example-source-note]]); the original stays immutable.
 2. **Promote** — the same file grows up by a `type` field edit (ADR-0004). No copy, no move;

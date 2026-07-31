@@ -1,28 +1,28 @@
 ---
-name: substrate-fetch-pdf
-description: Capture — given a DOI or PDF URL, download the original PDF into the vault `artefacts/` as a frozen **Artifact** and write a source-note sidecar that cites it, so it composes with /substrate:ingest and /substrate:promote (the "Artifact + provenance" destination). Invoke as /substrate:fetch-pdf.
+name: harness-fetch-pdf
+description: Capture — given a DOI or PDF URL, download the original PDF into the vault `artefacts/` as a frozen **Artifact** and write a source-note sidecar that cites it, so it composes with /harness:ingest and /harness:promote (the "Artifact + provenance" destination). Invoke as /harness:fetch-pdf.
 disable-model-invocation: true
 ---
 
-# /substrate:fetch-pdf — cited DOI/PDF → frozen artifact + source note
+# /harness:fetch-pdf — cited DOI/PDF → frozen artifact + source note
 
 Turn a citeable reference (a **DOI** or a direct **PDF URL**) into the original
 article, frozen in the vault `artefacts/` as an immutable **Artifact**, with a
 **source-note sidecar** that cites it. This is the "citeable PDF referenced →
 download as artefact" element of the ingest taxonomy (TASK-60): the destination
-is *Artifact + provenance*, the same one `/substrate:promote` freezes into.
+is *Artifact + provenance*, the same one `/harness:promote` freezes into.
 Read `CONTEXT.md` for the ubiquitous language (Artifact, Source, provenance,
 frozen) before you start.
 
 **Scope — freeze the original, don't read it for the graph.** This downloads and
 freezes one PDF and writes its citing sidecar. It does not extract text, summarise,
-or promote to a typed record — those are `/substrate:ingest` + `/substrate:promote`.
+or promote to a typed record — those are `/harness:ingest` + `/harness:promote`.
 Do not build DOI metadata enrichment, multi-file crawling, or paywall bypass here.
 
 ## How to run
 
 One step: the helper script both **downloads the PDF** and **writes the sidecar**.
-Unlike `/substrate:fetch-url` (where you convert HTML→markdown yourself), a PDF is
+Unlike `/harness:fetch-url` (where you convert HTML→markdown yourself), a PDF is
 an opaque binary you cannot faithfully re-render — so the download is done in the
 script with Node's built-in `fetch` (no dependency), writing the raw bytes.
 
@@ -92,10 +92,10 @@ The sidecar shape is `templates/source-note.md` plus two capture fields
 (`source-url`, the exact URL fetched; `captured`, the capture date in place of an
 authored `created`). `frozen: true` + the `artifact:` path mark the pair as an
 immutable Artifact; `provenance` / `source-url` carry the real DOI/URL you fetched. It composes with
-`/substrate:ingest` and `/substrate:promote`, which treat this exactly as the
+`/harness:ingest` and `/harness:promote`, which treat this exactly as the
 *Artifact + provenance* destination.
 
-> **On `type: source`.** As with `/substrate:fetch-url`, this is deliberately
+> **On `type: source`.** As with `/harness:fetch-url`, this is deliberately
 > *off* the canonical record enum (`idea/research/concept/prd/reference/adr`;
 > ADR-0004 + 0006). A frozen artifact's sidecar is a **Source** (CONTEXT.md), not
 > a typed graph record — the record `type` is assigned only when the ingest
@@ -115,7 +115,7 @@ immutable Artifact; `provenance` / `source-url` carry the real DOI/URL you fetch
 
 ## Related
 
-- **`/substrate:fetch-url`** — the sibling capture skill for web pages
+- **`/harness:fetch-url`** — the sibling capture skill for web pages
   (HTML→markdown into `Inbox/`). This one is for *binary PDFs* frozen as artifacts.
-- **`/substrate:ingest` / `/substrate:promote`** — the downstream triage that
+- **`/harness:ingest` / `/harness:promote`** — the downstream triage that
   cites this Artifact into typed graph records.

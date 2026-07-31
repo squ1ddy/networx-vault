@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 // fetch-pdf.mjs — download a cited PDF (from a DOI or PDF URL) into the vault's
 // artefacts/ as a frozen **Artifact**, and write a source-note sidecar that cites
-// it — so it composes with /substrate:ingest and /substrate:promote (the
+// it — so it composes with /harness:ingest and /harness:promote (the
 // "Artifact + provenance" destination).
 //
 //   node scripts/fetch-pdf.mjs --doi 10.1234/abc [options]
 //   node scripts/fetch-pdf.mjs --url https://.../paper.pdf [options]
 //
-// Unlike /substrate:fetch-url (where the agent converts HTML→markdown), a PDF is
+// Unlike /harness:fetch-url (where the agent converts HTML→markdown), a PDF is
 // an opaque binary the agent cannot faithfully render — so the download happens
 // *here*, with Node's built-in fetch (no dependency), writing the raw bytes. The
 // deterministic tail (DOI→URL resolution, slug, sidecar frontmatter) lives in
@@ -116,7 +116,7 @@ async function main() {
   try {
     const res = await fetch(downloadUrl, {
       redirect: "follow",
-      headers: { Accept: "application/pdf,*/*", "User-Agent": "substrate-fetch-pdf" },
+      headers: { Accept: "application/pdf,*/*", "User-Agent": "harness-fetch-pdf" },
     });
     if (!res.ok) fail(`Download failed: HTTP ${res.status} ${res.statusText} for ${downloadUrl}`);
     const ct = res.headers.get("content-type") || "";

@@ -1,4 +1,4 @@
-// fetch-pdf-core.mjs — pure logic for the /substrate:fetch-pdf skill.
+// fetch-pdf-core.mjs — pure logic for the /harness:fetch-pdf skill.
 //
 // This module has NO network and NO I/O: it only turns a (DOI-or-URL, title,
 // ...) input into (a) the URL to download from, (b) the artefact filename, and

@@ -4,7 +4,7 @@
 // derivation, and template-fill are unit-testable without a filesystem, git,
 // or a real vault.
 //
-// See .agents/skills/substrate-ingest/SKILL.md for the Companion Document
+// See .agents/skills/harness-ingest/SKILL.md for the Companion Document
 // format and docs/adr/0004 + 0006 + vault-template/templates/* for the record
 // model this fills.
 

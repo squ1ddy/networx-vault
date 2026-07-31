@@ -1,10 +1,10 @@
 ---
-name: substrate-ingest
-description: End-of-session ingest — read a Session folder (a .jsonl session export plus sibling artefacts) and produce a Companion Document, a verbose narrative digest with every element source-tagged and given a promotion recommendation. Invoke as /substrate:ingest.
+name: harness-ingest
+description: End-of-session ingest — read a Session folder (a .jsonl session export plus sibling artefacts) and produce a Companion Document, a verbose narrative digest with every element source-tagged and given a promotion recommendation. Invoke as /harness:ingest.
 disable-model-invocation: true
 ---
 
-# /substrate:ingest — Session → Companion Document
+# /harness:ingest — Session → Companion Document
 
 > **FIRST DRAFT (TASK-49).** The two outputs and the promotion-recommendation
 > model are settled; the exact **body-section taxonomy** and the **Claude
