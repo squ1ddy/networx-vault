@@ -1,4 +1,4 @@
-// fetch-url-core.mjs — pure logic for the /harness:fetch-url skill.
+// fetch-url-core.mjs — pure logic for the /harness-fetch-url skill.
 //
 // The *fetch and HTML→markdown conversion* is done by the calling agent (its
 // own web-fetch), so this module deliberately has NO network and NO I/O: it
@@ -59,7 +59,7 @@ export function normalizeMarkdown(md) {
 // (type/title/source-url/captured/tags) followed by the H1 and the normalised
 // body. The `source` tag is always present (and deduped) so these captures are
 // trivially filterable. An H1 is injected when the body has none, so every
-// source is a well-formed record-shaped file ready for /harness:ingest.
+// source is a well-formed record-shaped file ready for /harness-ingest.
 export function buildSourceFile({ url, title, md, captured, tags } = {}) {
   const resolvedTitle = deriveTitle({ title, md, url });
   const tagList = ["source", ...(Array.isArray(tags) ? tags : [])]

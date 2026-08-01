@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // fetch-url.mjs — write a fetched-and-converted web page into the vault Inbox
-// as a light **source** record, so it composes with /harness:ingest.
+// as a light **source** record, so it composes with /harness-ingest.
 //
 //   node scripts/fetch-url.mjs --url <url> --md-file <converted.md> [options]
 //   <converted markdown on stdin> | node scripts/fetch-url.mjs --url <url>

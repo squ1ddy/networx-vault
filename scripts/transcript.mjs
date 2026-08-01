@@ -8,7 +8,7 @@
 //
 // With no --out, the transcript is written next to the input as
 // <session>.transcript.md. This is a deterministic renderer only: the distilled
-// Companion Document is produced separately by the /harness:ingest skill.
+// Companion Document is produced separately by the /harness-ingest skill.
 //
 // Seam for testing/portability: the core (parse + render) lives in
 // lib/transcript-core.mjs and is pure; this wrapper only does I/O + arg parsing.

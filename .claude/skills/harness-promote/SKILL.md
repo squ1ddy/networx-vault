@@ -1,12 +1,12 @@
 ---
 name: harness-promote
-description: Promotion — take a *triaged* Companion Document and turn its remaining elements into their destinations: typed vault Records (from templates, in topics/<topic>/), Artifact+provenance citations (frozen, off-graph), and ingest-ready backlog todos. Then freeze the session originals. Invoke as /harness:promote.
+description: Promotion — take a *triaged* Companion Document and turn its remaining elements into their destinations: typed vault Records (from templates, in topics/<topic>/), Artifact+provenance citations (frozen, off-graph), and ingest-ready backlog todos. Then freeze the session originals. Invoke as /harness-promote.
 disable-model-invocation: true
 ---
 
-# /harness:promote — Companion Document → typed records
+# /harness-promote — Companion Document → typed records
 
-Second half of the ingest MVP. `/harness:ingest` (TASK-49) produced a
+Second half of the ingest MVP. `/harness-ingest` (TASK-49) produced a
 **Companion Document** — a verbose narrative digest whose every element is
 inline-tagged with `source:`, `topic:`, `promote:`, and optional `pre-skill:`.
 This skill turns a **triaged** Companion Document into the graph. Read

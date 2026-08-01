@@ -111,7 +111,7 @@ topic. When it's non-obvious, record it in the task notes as `Next skill: …`.
 - **A decision only the owner can make** (`awaiting-human` label) → owner resolves; no skill. It
   usually unblocks a downstream task.
 - **Harvest/ingest of existing material** → **`/research`** to mine, then the substrate pipeline
-  **`/harness:ingest`** → **`/harness:promote`**.
+  **`/harness-ingest`** → **`/harness-promote`**.
 
 **Rule of thumb:** if you're tempted to `/implement` but can't yet write the acceptance test, you
 needed `/to-spec` (or `/grilling`) first.

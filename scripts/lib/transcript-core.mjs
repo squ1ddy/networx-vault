@@ -11,7 +11,7 @@
 // Origin-agnostic by design (see CONTEXT.md "Session folder"): it reads whatever
 // events are present and skips the ones it does not understand, so a hand-saved
 // export and a live CLI session render the same way. It does NOT distil or
-// promote — that is the Companion Document's job (the /harness:ingest skill).
+// promote — that is the Companion Document's job (the /harness-ingest skill).
 
 // Event `type` values that carry no conversation content — CLI bookkeeping we
 // skip so the transcript stays a readable conversation, not a machine log.
