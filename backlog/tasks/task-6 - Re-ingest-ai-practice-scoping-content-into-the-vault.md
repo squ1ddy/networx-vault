@@ -4,6 +4,7 @@ title: Re-ingest ai-practice-scoping content into the vault
 status: To Do
 assignee: []
 created_date: '2026-07-28 10:24'
+updated_date: '2026-08-01 01:19'
 labels:
   - migrated-from-substrate
   - ingest
@@ -14,7 +15,7 @@ ordinal: 31000
 ## Description
 
 <!-- SECTION:DESCRIPTION:BEGIN -->
-Migrated from the substrate backlog (was substrate TASK-22). Re-ingest ai-practice-scoping material as typed records. Source: D:/Git/platform_research_sessions/ai-practice. Next skill: /substrate:ingest then /substrate:promote.
+Migrated from the substrate backlog (was substrate TASK-22). Re-ingest ai-practice-scoping material as typed records. Source: D:/Git/platform_research_sessions/ai-practice. Next skill: /harness-ingest then /harness-promote.
 <!-- SECTION:DESCRIPTION:END -->
 
 ## Acceptance Criteria
