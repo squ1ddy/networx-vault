@@ -45,5 +45,5 @@ The owner can stamp/refresh a vault and know exactly where any record goes and w
 
 ## Reference inputs
 - `johnnydecimal.com` · PARA · Zettelkasten
-- `D:\Git\practice_poc` (operating-model content that must have a home)
+- `D:\Git\practice_poc` (operating-model content who's content should be considered in a systematic way for inclusion as part of networx-vault, this should be minimised and owner directed - even if several hours of /grill-with-docs session are required)
 - `github.com/maleta/claude-sessions` (informs the `session` record type — see HO-U2)
