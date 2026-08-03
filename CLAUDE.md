@@ -30,10 +30,12 @@ conventions:
 
 ## CLI gotchas (Windows)
 
-- The `backlog` CLI is an npm **`.cmd` shim**: a `|` pipe character *anywhere* in a
-  `--plan` / `--notes` / `--final-summary` value breaks arg parsing. Use `/` or `,` instead of `|`.
+- **Pipes in `backlog` CLI values are safe.** `|` in `--content` / `--notes` / `--plan` /
+  `--final-summary` values was tested against backlog v1.48.0 on 2026-08-03 from both
+  PowerShell and Bash, and passed through byte-perfect — markdown tables included. (An
+  earlier note here claimed the npm `.cmd` shim broke on pipes; that did not reproduce.)
 - In **PowerShell** a bare `@name` triggers splatting — always quote assignees as `-a '@agent'`.
-  (The Bash tool avoids the splat, but still keep pipes out of CLI text values.)
+  (Untested — carried forward as a precaution; not covered by the 2026-08-03 test.)
 
 <!-- BACKLOG.MD GUIDELINES START -->
 <!-- backlog.md-instructions-version: 1.48.0 -->
